@@ -78,10 +78,10 @@ def process_element(elem, file):
 """
 Process each XML file
 """
-def process_file(file):
+def process_file(f):
     tree = ET.parse('%s/%s' % (options.input, f))
     root = tree.getroot()
-    process_element(root, file)
+    process_element(root, f)
     tree.write('%s/%s' % (options.output, f), encoding='UTF-8')
     
 if options.thumbnail:
