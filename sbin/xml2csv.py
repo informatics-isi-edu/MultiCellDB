@@ -16,6 +16,7 @@ The configuration file contains a JSON object with the following keys:
     - "schema": the schema name
     - "xml": the directory containing the XML files,
     - "thumbnail": the directory with the thumbnails files,
+    - "thumbnail_url": the URL path for the thumbnails files,
     - "csv": the output directory where the CSV files and the beanbag will be generated
 
 Usage:
@@ -30,7 +31,6 @@ from optparse import OptionParser
 import json
 import xml.etree.ElementTree as ET
 from httplib import HTTPSConnection, OK
-import json
 import bagit
 import zipfile
 
